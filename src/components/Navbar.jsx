@@ -31,9 +31,7 @@ export default function Navbar() {
   return (
     <nav 
       ref={container}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
-                 ${isMobileMenuOpen ? 'bg-background/95 backdrop-blur-xl py-4' : 'bg-transparent py-6'}
-                 [&.scrolled]:bg-background/95 [&.scrolled]:backdrop-blur-xl [&.scrolled]:shadow-sm [&.scrolled]:py-4`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-background/95 backdrop-blur-xl shadow-sm py-4`}
     >
       <div className="w-full flex items-center justify-between px-6 lg:px-20 max-w-[1400px] mx-auto">
         
