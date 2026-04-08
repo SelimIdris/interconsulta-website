@@ -1,9 +1,11 @@
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
   const container = useRef(null);
+  const { t } = useTranslation();
 
   useGSAP(() => {
     gsap.from('.hero-reveal', {
@@ -32,25 +34,25 @@ export default function Hero() {
         <div className="w-full lg:w-[55%] flex flex-col justify-center">
           <span className="hero-reveal font-mono text-[12px] uppercase tracking-widest font-semibold mb-6 block text-sea flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-sea animate-pulse"></div>
-            Zugelassene Revisionsexperten RAB
+            {t('hero.badge')}
           </span>
 
           <h1 className="hero-reveal text-left mb-8">
             <span className="block font-sans font-bold text-5xl md:text-6xl lg:text-[72px] text-textDark tracking-tight mb-2 leading-[1.05]">
-              Wirtschaftsprüfung<br />auf höchstem Niveau.
+              {t('hero.headline1')}<br />{t('hero.headline2')}
             </span>
             <span className="block font-serif italic text-5xl md:text-6xl lg:text-[72px] text-sea leading-[1.1] mt-2">
-              Präzision schafft<br />Vertrauen.
+              {t('hero.italic')}
             </span>
           </h1>
           
           <p className="hero-reveal font-sans text-lg text-textDark/70 mb-10 max-w-md leading-relaxed">
-            Unabhängige Prüfungs- und Beratungsdienstleistungen für Schweizer KMU und Konzerne. Wir schaffen verlässliche Entscheidungsgrundlagen für Stakeholder.
+            {t('hero.sub')}
           </p>
 
           <div className="hero-reveal flex items-center gap-6">
             <a href="#kontakt" className="bg-textDark text-white px-8 py-3.5 rounded-full font-sans font-medium text-[15px] transition-all duration-300 hover:bg-sea shadow-sm hover:shadow-md hover:-translate-y-[2px]">
-              Kontakt aufnehmen
+              {t('hero.cta')}
             </a>
           </div>
         </div>

@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "values": "Werte",
+    "about": "Über uns",
+    "process": "Vorgehen",
+    "services": "Leistungen",
+    "contact": "Kontakt aufnehmen"
+  },
+  "hero": {
+    "badge": "Zugelassene Revisionsexperten RAB",
+    "headline1": "Wirtschaftsprüfung",
+    "headline2": "auf höchstem Niveau.",
+    "italic": "Präzision schafft Vertrauen.",
+    "sub": "Unabhängige Prüfungs- und Beratungsdienstleistungen für Schweizer KMU und Konzerne. Wir schaffen verlässliche Entscheidungsgrundlagen für Stakeholder.",
+    "cta": "Kontakt aufnehmen"
+  },
+  "features": {
+    "label": "Unsere Kernwerte",
+    "headline": "Verlässlichkeit ist nicht verhandelbar.",
+    "sub": "Als moderne Prüfgesellschaft verbinden wir gesetzliche Strenge mit unternehmerischer Sensibilität.",
+    "v1title": "Unabhängigkeit & Integrität",
+    "v1desc": "Gemäss den strengen Richtlinien der Revisionskammer wahren wir absolute Unabhängigkeit. Wir liefern eine rein objektive und unverfälschte Beurteilung Ihrer Jahresrechnung nach Schweizer Normen.",
+    "v2title": "Risikoorientierter Fokus",
+    "v2desc": "Wir prüfen nicht einfach starre Checklisten ab. Unser Fokus liegt auf den wesentlichen Risiken Ihres Geschäftsmodells und den Schlüsselkontrollen Ihres Internen Kontrollsystems (IKS).",
+    "v3title": "Unternehmerischer Weitblick",
+    "v3desc": "Unsere Revision endet nicht mit dem Stempel. Der strukturierte Management Letter und unsere direkte Rückmeldung an den Verwaltungsrat liefern konkreten Mehrwert für operative Verbesserungen."
+  },
+  "about": {
+    "label": "Über uns",
+    "headline": "Revision als strategischer Mehrwert für Ihr Unternehmen.",
+    "quote": "«Eine Prüfung ist weit mehr als die blosse Erfüllung von Artikel 727 OR – sie ist ein zentrales Gütesiegel für Ihr Unternehmen.»",
+    "p1": "Wir verbinden fundierte Methodik (Swiss GAAP FER, OR) mit echtem unternehmerischem Verständnis. Durch den unkomplizierten Austausch auf Management-Stufe sichern wir Prozesse ab und schaffen strukturelles Vertrauen für die Zukunft.",
+    "memberships": "Mitgliedschaften",
+    "role": "Zugelassener Revisionsexperte RAB"
+  },
+  "philosophy": {
+    "label": "Unsere Philosophie",
+    "intro": "Viele Prüfungen erfüllen lediglich eine gesetzliche Pflicht.",
+    "statement": "Wir verstehen Revision als Grundlage für Klarheit, Vertrauen und saubere Entscheidungen."
+  },
+  "protocol": {
+    "label": "Prüfungsansatz",
+    "headline": "Methodisch. Effizient. Fokussiert.",
+    "sub": "Unser risikoorientierter Revisionsprozess garantiert höchste Präzision ohne Ihre internen Ressourcen unnötig stark zu strapazieren.",
+    "s1title": "Risikobeurteilung & Planung",
+    "s1desc": "Analyse des Geschäftsumfelds und Identifikation spezifischer Prüffelder zur Definition einer massgeschneiderten Revisionsstrategie.",
+    "s2title": "Prüfungshandlungen & IKS",
+    "s2desc": "Gezielte System- und Detailprüfungen. Im Zentrum stehen fundierte Datenanalysen und die kritische Würdigung Ihres Internen Kontrollsystems (IKS).",
+    "s3title": "Berichterstattung (Management Letter)",
+    "s3desc": "Umfassender Revisionsbericht für die Generalversammlung und präziser Management Letter an den Verwaltungsrat mit Empfehlungen zur Prozessoptimierung."
+  },
+  "services": {
+    "label": "Unsere Expertisen",
+    "headline": "Prüfungsgebiete, die Sicherheit schaffen.",
+    "sub": "Als zugelassene Revisionsexperten RAB decken wir alle relevanten Facetten der Schweizer Wirtschaftsprüfung ab.",
+    "t1label": "Ordentliche Revision",
+    "t1badge": "Höchste Sicherheit",
+    "t1title": "Umfassende Prüfung für maximale Transparenz.",
+    "t1desc": "Die ordentliche Revision bietet Ihnen, Ihren Investoren und Stakeholdern das stärkste Mass an Verlässlichkeit. Wir durchleuchten Ihr IKS präzise und sichern die strikte Einhaltung der gesetzlichen Rahmenbedingungen (z.B. OR 727, Swiss GAAP FER).",
+    "t1btn": "Details anfragen",
+    "t2label": "Eingeschränkte Revision",
+    "t2badge": "Effiziente Kontrolle",
+    "t2title": "Präziser Fokus auf die wesentlichen Kennzahlen.",
+    "t2desc": "Unsere eingeschränkte Revision ist massgeschneidert für Schweizer KMU. Sie kombiniert gesetzliche Compliance mit schlanken Prozessen. Wir identifizieren punktgenau Risiken, ohne Ihr operatives Geschäft unnötig zu belasten.",
+    "t2btn": "Beratung buchen",
+    "t3label": "Spezialprüfungen",
+    "t3badge": "Transaktions-Begleitung",
+    "t3title": "Rechtssicherheit bei Umwandlungen & Fusionen.",
+    "t3desc": "Ganz gleich ob Gründungen, Kapitalerhöhungen oder Umstrukturierungen nach FusG: Wir liefern verlässliche Spezialprüfungsberichte, die entscheidende juristische Weichen für die Zukunft Ihres Unternehmens stellen.",
+    "t3btn": "Experten kontaktieren"
+  },
+  "partner": {
+    "label": "Starke Partnerschaften",
+    "headline": "Wir wachsen mit den Besten.",
+    "sub": "Als moderne Prüfungsgesellschaft auditieren und beraten wir einige der namhaftesten Unternehmen. Vertrauen, das verpflichtet."
+  },
+  "contact": {
+    "label": "Kontakt",
+    "headline": "Lassen Sie uns unverbindlich sprechen.",
+    "sub": "Haben Sie Fragen zur Revision oder wünschen Sie ein erstes Kennenlernen? Wir stehen Ihnen gerne zur Verfügung.",
+    "company": "Inter Consulta Audit AG",
+    "formTitle": "Ihre Anfrage",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefonnummer",
+    "message": "Ihr Anliegen",
+    "namePh": "Ihr Vor- & Nachname",
+    "emailPh": "ihre.email@firma.ch",
+    "phonePh": "+41 00 000 00 00",
+    "messagePh": "Wie können wir Sie unterstützen?",
+    "send": "Nachricht senden"
+  },
+  "footer": {
+    "tagline": "Unabhängige Revisionsdienstleistungen und persönliche Beratung in der Schweiz. Gezielt, verlässlich und professionell.",
+    "memberOf": "Mitglied bei",
+    "nav": "Navigation",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

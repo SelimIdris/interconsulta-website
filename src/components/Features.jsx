@@ -2,11 +2,13 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Features() {
   const containerRef = useRef(null);
+  const { t } = useTranslation();
 
   useGSAP(() => {
     const sections = gsap.utils.toArray('.value-block');
@@ -27,45 +29,45 @@ export default function Features() {
   return (
     <section ref={containerRef} className="w-full py-24 lg:py-32 bg-white" id="werte">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 w-full relative z-10">
-        
+
         <div className="mb-20 md:w-4/5 max-w-4xl">
           <span className="font-mono text-[11px] uppercase tracking-widest font-semibold mb-6 block text-sea">
-            Unsere Kernwerte
+            {t('features.label')}
           </span>
           <h2 className="font-sans font-bold text-4xl lg:text-5xl xl:text-6xl text-textDark mb-6 leading-[1.1] tracking-tight">
-            Verlässlichkeit ist nicht verhandelbar.
+            {t('features.headline')}
           </h2>
           <p className="font-serif italic text-2xl md:text-3xl lg:text-4xl text-textDark/60 leading-relaxed">
-            Als moderne Prüfgesellschaft verbinden wir gesetzliche Strenge mit unternehmerischer Sensibilität.
+            {t('features.sub')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-          
+
           <div className="value-block flex flex-col">
             <span className="font-sans text-[64px] lg:text-[80px] text-background font-extrabold mb-2 leading-none -ml-1">01</span>
             <div className="h-0.5 w-12 bg-burntOrange mb-8"></div>
-            <h3 className="font-sans font-bold text-2xl text-textDark mb-4">Unabhängigkeit & Integrität</h3>
+            <h3 className="font-sans font-bold text-2xl text-textDark mb-4">{t('features.v1title')}</h3>
             <p className="font-sans text-lg text-textDark/70 leading-relaxed">
-              Gemäss den strengen Richtlinien der Revisionskammer wahren wir absolute Unabhängigkeit. Wir liefern eine rein objektive und unverfälschte Beurteilung Ihrer Jahresrechnung nach Schweizer Normen.
+              {t('features.v1desc')}
             </p>
           </div>
 
           <div className="value-block flex flex-col">
             <span className="font-sans text-[64px] lg:text-[80px] text-background font-extrabold mb-2 leading-none -ml-1">02</span>
             <div className="h-0.5 w-12 bg-sandstone mb-8"></div>
-            <h3 className="font-sans font-bold text-2xl text-textDark mb-4">Risikoorientierter Fokus</h3>
+            <h3 className="font-sans font-bold text-2xl text-textDark mb-4">{t('features.v2title')}</h3>
             <p className="font-sans text-lg text-textDark/70 leading-relaxed">
-              Wir prüfen nicht einfach starre Checklisten ab. Unser Fokus liegt auf den wesentlichen Risiken Ihres Geschäftsmodells und den Schlüsselkontrollen Ihres Internen Kontrollsystems (IKS).
+              {t('features.v2desc')}
             </p>
           </div>
 
           <div className="value-block flex flex-col">
             <span className="font-sans text-[64px] lg:text-[80px] text-background font-extrabold mb-2 leading-none -ml-1">03</span>
             <div className="h-0.5 w-12 bg-lagoon mb-8"></div>
-            <h3 className="font-sans font-bold text-2xl text-textDark mb-4">Unternehmerischer Weitblick</h3>
+            <h3 className="font-sans font-bold text-2xl text-textDark mb-4">{t('features.v3title')}</h3>
             <p className="font-sans text-lg text-textDark/70 leading-relaxed">
-              Unsere Revision endet nicht mit dem Stempel. Der strukturierte Management Letter und unsere direkte Rückmeldung an den Verwaltungsrat liefern konkreten Mehrwert für operative Verbesserungen.
+              {t('features.v3desc')}
             </p>
           </div>
 

@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "values": "Valeurs",
+    "about": "À propos",
+    "process": "Approche",
+    "services": "Prestations",
+    "contact": "Nous contacter"
+  },
+  "hero": {
+    "badge": "Experts-réviseurs agréés RAB",
+    "headline1": "Révision comptable",
+    "headline2": "au plus haut niveau.",
+    "italic": "La précision crée la confiance.",
+    "sub": "Services indépendants d'audit et de conseil pour les PME et groupes suisses. Nous créons des bases de décision fiables pour vos parties prenantes.",
+    "cta": "Nous contacter"
+  },
+  "features": {
+    "label": "Nos valeurs fondamentales",
+    "headline": "La fiabilité n'est pas négociable.",
+    "sub": "En tant que société d'audit moderne, nous allons rigueur légale et sensibilité entrepreneuriale.",
+    "v1title": "Indépendance & Intégrité",
+    "v1desc": "Conformément aux directives strictes de la Chambre fiduciaire, nous préservons une indépendance absolue. Nous fournissons une évaluation purement objective de vos comptes annuels selon les normes suisses.",
+    "v2title": "Focus orienté risques",
+    "v2desc": "Nous ne nous contentons pas de cocher des listes. Notre focus porte sur les risques essentiels de votre modèle d'affaires et les contrôles clés de votre système de contrôle interne (SCI).",
+    "v3title": "Vision entrepreneuriale",
+    "v3desc": "Notre révision ne s'arrête pas au tampon. La lettre de direction structurée et nos retours directs au conseil d'administration apportent une valeur ajoutée concrète pour améliorer vos processus."
+  },
+  "about": {
+    "label": "À propos",
+    "headline": "La révision comme valeur ajoutée stratégique pour votre entreprise.",
+    "quote": "«Un contrôle va bien au-delà du simple respect de l'article 727 CO – c'est un gage de qualité central pour votre entreprise.»",
+    "p1": "Nous combinons une méthodologie solide (Swiss GAAP RPC, CO) avec une véritable compréhension entrepreneuriale. Grâce à un échange direct au niveau de la direction, nous sécurisons les processus et créons une confiance structurelle pour l'avenir.",
+    "memberships": "Affiliations",
+    "role": "Expert-réviseur agréé RAB"
+  },
+  "philosophy": {
+    "label": "Notre philosophie",
+    "intro": "De nombreux contrôles ne remplissent qu'une obligation légale.",
+    "statement": "Nous concevons la révision comme le fondement de la clarté, de la confiance et des décisions saines."
+  },
+  "protocol": {
+    "label": "Approche d'audit",
+    "headline": "Méthodique. Efficace. Ciblé.",
+    "sub": "Notre processus de révision orienté risques garantit une précision maximale sans solliciter inutilement vos ressources internes.",
+    "s1title": "Évaluation des risques & Planification",
+    "s1desc": "Analyse de l'environnement commercial et identification des domaines d'audit spécifiques pour définir une stratégie de révision sur mesure.",
+    "s2title": "Procédures d'audit & SCI",
+    "s2desc": "Contrôles ciblés des systèmes et de détail. L'analyse approfondie des données et l'évaluation critique de votre système de contrôle interne (SCI) sont au cœur de notre démarche.",
+    "s3title": "Rapport (Management Letter)",
+    "s3desc": "Rapport de révision complet pour l'assemblée générale et lettre de direction précise au conseil d'administration avec des recommandations d'optimisation des processus."
+  },
+  "services": {
+    "label": "Nos expertises",
+    "headline": "Domaines d'audit qui créent la sécurité.",
+    "sub": "En tant qu'experts-réviseurs agréés RAB, nous couvrons toutes les facettes pertinentes de l'audit suisse.",
+    "t1label": "Révision ordinaire",
+    "t1badge": "Sécurité maximale",
+    "t1title": "Contrôle complet pour une transparence maximale.",
+    "t1desc": "La révision ordinaire offre à vous, vos investisseurs et parties prenantes le plus haut degré de fiabilité. Nous examinons votre SCI avec précision et assurons le respect strict du cadre légal (ex. CO 727, Swiss GAAP RPC).",
+    "t1btn": "Demander des détails",
+    "t2label": "Révision restreinte",
+    "t2badge": "Contrôle efficace",
+    "t2title": "Focus précis sur les indicateurs essentiels.",
+    "t2desc": "Notre révision restreinte est sur mesure pour les PME suisses. Elle combine conformité légale et processus allégés. Nous identifions précisément les risques sans perturber inutilement votre activité opérationnelle.",
+    "t2btn": "Réserver une consultation",
+    "t3label": "Audits spéciaux",
+    "t3badge": "Accompagnement transactionnel",
+    "t3title": "Sécurité juridique lors de transformations & fusions.",
+    "t3desc": "Qu'il s'agisse de fondations, d'augmentations de capital ou de restructurations selon la LFus : nous fournissons des rapports d'audit spéciaux fiables qui posent des jalons juridiques décisifs pour l'avenir de votre entreprise.",
+    "t3btn": "Contacter les experts"
+  },
+  "partner": {
+    "label": "Partenariats solides",
+    "headline": "Nous grandissons avec les meilleurs.",
+    "sub": "En tant que société d'audit moderne, nous auditons et conseillons certaines des entreprises les plus renommées. Une confiance qui engage."
+  },
+  "contact": {
+    "label": "Contact",
+    "headline": "Parlons-en sans engagement.",
+    "sub": "Vous avez des questions sur la révision ou souhaitez faire connaissance ? Nous sommes à votre disposition.",
+    "company": "Inter Consulta Audit AG",
+    "formTitle": "Votre demande",
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Numéro de téléphone",
+    "message": "Votre demande",
+    "namePh": "Votre prénom & nom",
+    "emailPh": "votre.email@entreprise.ch",
+    "phonePh": "+41 00 000 00 00",
+    "messagePh": "Comment pouvons-nous vous aider ?",
+    "send": "Envoyer le message"
+  },
+  "footer": {
+    "tagline": "Services indépendants d'audit et conseil personnel en Suisse. Ciblé, fiable et professionnel.",
+    "memberOf": "Membre de",
+    "nav": "Navigation",
+    "impressum": "Mentions légales",
+    "datenschutz": "Protection des données",
+    "rights": "Tous droits réservés."
+  }
+}

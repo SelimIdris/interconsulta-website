@@ -3,63 +3,63 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs"
 import { Pointer, ShieldCheck, Scale } from "lucide-react"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
-
-const tabsData = [
-  {
-    value: "ordentliche",
-    icon: <ShieldCheck className="h-auto w-4 shrink-0 transition-colors" />,
-    label: "Ordentliche Revision",
-    content: {
-      badge: "Höchste Sicherheit",
-      title: "Umfassende Prüfung für maximale Transparenz.",
-      description:
-        "Die ordentliche Revision bietet Ihnen, Ihren Investoren und Stakeholdern das stärkste Mass an Verlässlichkeit. Wir durchleuchten Ihr IKS präzise und sichern die strikte Einhaltung der gesetzlichen Rahmenbedingungen (z.B. OR 727, Swiss GAAP FER).",
-      buttonText: "Details anfragen",
-      imageSrc: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop",
-      imageAlt: "Prüfung Dokumente Ordentliche Revision",
-    },
-  },
-  {
-    value: "eingeschraenkte",
-    icon: <Pointer className="h-auto w-4 shrink-0 transition-colors" />,
-    label: "Eingeschränkte Revision",
-    content: {
-      badge: "Effiziente Kontrolle",
-      title: "Präziser Fokus auf die wesentlichen Kennzahlen.",
-      description:
-        "Unsere eingeschränkte Revision ist massgeschneidert für Schweizer KMU. Sie kombiniert gesetzliche Compliance mit schlanken Prozessen. Wir identifizieren punktgenau Risiken, ohne Ihr operatives Geschäft unnötig zu belasten.",
-      buttonText: "Beratung buchen",
-      imageSrc: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2670&auto=format&fit=crop",
-      imageAlt: "Meeting Raum Eingeschränkte Revision",
-    },
-  },
-  {
-    value: "spezial",
-    icon: <Scale className="h-auto w-4 shrink-0 transition-colors" />,
-    label: "Spezialprüfungen",
-    content: {
-      badge: "Transaktions-Begleitung",
-      title: "Rechtssicherheit bei Umwandlungen & Fusionen.",
-      description:
-        "Ganz gleich ob Gründungen, Kapitalerhöhungen oder Umstrukturierungen nach FusG: Wir liefern verlässliche Spezialprüfungsberichte, die entscheidende juristische Weichen für die Zukunft Ihres Unternehmens stellen.",
-      buttonText: "Experten kontaktieren",
-      imageSrc: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop",
-      imageAlt: "Vertragsbesprechung Spezialprüfung",
-    },
-  },
-];
+import { useTranslation } from 'react-i18next'
 
 export default function Services() {
+  const { t } = useTranslation();
+
+  const tabsData = [
+    {
+      value: "ordentliche",
+      icon: <ShieldCheck className="h-auto w-4 shrink-0 transition-colors" />,
+      label: t('services.t1label'),
+      content: {
+        badge: t('services.t1badge'),
+        title: t('services.t1title'),
+        description: t('services.t1desc'),
+        buttonText: t('services.t1btn'),
+        imageSrc: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop",
+        imageAlt: "Prüfung Dokumente Ordentliche Revision",
+      },
+    },
+    {
+      value: "eingeschraenkte",
+      icon: <Pointer className="h-auto w-4 shrink-0 transition-colors" />,
+      label: t('services.t2label'),
+      content: {
+        badge: t('services.t2badge'),
+        title: t('services.t2title'),
+        description: t('services.t2desc'),
+        buttonText: t('services.t2btn'),
+        imageSrc: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2670&auto=format&fit=crop",
+        imageAlt: "Meeting Raum Eingeschränkte Revision",
+      },
+    },
+    {
+      value: "spezial",
+      icon: <Scale className="h-auto w-4 shrink-0 transition-colors" />,
+      label: t('services.t3label'),
+      content: {
+        badge: t('services.t3badge'),
+        title: t('services.t3title'),
+        description: t('services.t3desc'),
+        buttonText: t('services.t3btn'),
+        imageSrc: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop",
+        imageAlt: "Vertragsbesprechung Spezialprüfung",
+      },
+    },
+  ];
+
   return (
     <section className="py-24 lg:py-32 scroll-mt-24 bg-white" id="leistungen-detail">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-[1400px]">
         <div className="flex flex-col items-center gap-4 text-center mb-16">
-          <Badge variant="outline" className="mb-2 tracking-widest font-mono uppercase bg-[#F5F8F7] border-sea/20 text-sea">Unsere Expertisen</Badge>
+          <Badge variant="outline" className="mb-2 tracking-widest font-mono uppercase bg-[#F5F8F7] border-sea/20 text-sea">{t('services.label')}</Badge>
           <h2 className="max-w-2xl text-4xl lg:text-5xl font-sans font-bold text-textDark tracking-tight leading-[1.1]">
-            Prüfungsgebiete, die Sicherheit schaffen.
+            {t('services.headline')}
           </h2>
           <p className="text-textDark/70 text-lg max-w-xl mt-2 mx-auto">
-            Als zugelassene Revisionsexperten RAB decken wir alle relevanten Facetten der Schweizer Wirtschaftsprüfung ab.
+            {t('services.sub')}
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export default function Services() {
                     {tab.content.buttonText}
                   </Button>
                 </div>
-                
+
                 <div className="relative w-full overflow-hidden rounded-[1.5rem] shadow-premium bg-sea/10 aspect-[4/3] group">
                   <img
                     src={tab.content.imageSrc}

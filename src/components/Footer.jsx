@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="w-full bg-textDark text-white">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 pt-20 lg:pt-28 pb-10">
@@ -19,7 +22,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="font-sans text-white/55 text-sm leading-relaxed mb-8 max-w-[280px]">
-              Unabhängige Revisionsdienstleistungen und persönliche Beratung in der Schweiz. Gezielt, verlässlich und professionell.
+              {t('footer.tagline')}
             </p>
             <div className="font-mono text-[12px] text-white/40 uppercase tracking-widest mb-8 space-y-1">
               <div>Waaggasse 5</div>
@@ -41,7 +44,7 @@ export default function Footer() {
           {/* Spalte 2: EXPERTsuisse zentriert */}
           <div className="flex-1 flex flex-col items-center justify-center text-center">
             <p className="font-mono text-[10px] text-white/30 uppercase tracking-[0.25em] mb-5">
-              Mitglied bei
+              {t('footer.memberOf')}
             </p>
             <a
               href="https://www.expertsuisse.ch"
@@ -62,14 +65,14 @@ export default function Footer() {
           <div className="flex-1 lg:flex lg:justify-end">
             <div>
               <h4 className="font-mono text-[11px] text-sandstone uppercase tracking-widest mb-6 font-semibold">
-                Navigation
+                {t('footer.nav')}
               </h4>
               <div className="flex flex-col gap-4">
-                <a href="#werte" className="font-sans text-sm text-white/70 hover:text-white transition-colors">Werte</a>
-                <a href="#ueber-uns" className="font-sans text-sm text-white/70 hover:text-white transition-colors">Über uns</a>
-                <a href="#vorgehen" className="font-sans text-sm text-white/70 hover:text-white transition-colors">Vorgehen</a>
-                <a href="#leistungen-detail" className="font-sans text-sm text-white/70 hover:text-white transition-colors">Leistungen</a>
-                <a href="#kontakt" className="font-sans text-sm text-white/70 hover:text-white transition-colors">Kontakt</a>
+                <a href="#werte" className="font-sans text-sm text-white/70 hover:text-white transition-colors">{t('nav.values')}</a>
+                <a href="#ueber-uns" className="font-sans text-sm text-white/70 hover:text-white transition-colors">{t('nav.about')}</a>
+                <a href="#vorgehen" className="font-sans text-sm text-white/70 hover:text-white transition-colors">{t('nav.process')}</a>
+                <a href="#leistungen-detail" className="font-sans text-sm text-white/70 hover:text-white transition-colors">{t('nav.services')}</a>
+                <a href="#kontakt" className="font-sans text-sm text-white/70 hover:text-white transition-colors">{t('nav.contact')}</a>
               </div>
             </div>
           </div>
@@ -79,11 +82,11 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-mono text-[11px] text-white/25 uppercase tracking-widest">
-            &copy; {new Date().getFullYear()} Inter Consulta Audit AG. Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} Inter Consulta Audit AG. {t('footer.rights')}
           </p>
           <div className="flex items-center gap-6">
-            <Link to="/impressum" className="font-mono text-[11px] text-white/25 uppercase tracking-widest hover:text-white/55 transition-colors">Impressum</Link>
-            <Link to="/datenschutz" className="font-mono text-[11px] text-white/25 uppercase tracking-widest hover:text-white/55 transition-colors">Datenschutz</Link>
+            <Link to="/impressum" className="font-mono text-[11px] text-white/25 uppercase tracking-widest hover:text-white/55 transition-colors">{t('footer.impressum')}</Link>
+            <Link to="/datenschutz" className="font-mono text-[11px] text-white/25 uppercase tracking-widest hover:text-white/55 transition-colors">{t('footer.datenschutz')}</Link>
           </div>
         </div>
 

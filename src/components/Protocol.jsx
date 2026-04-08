@@ -2,29 +2,31 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const steps = [
-  {
-    number: '01',
-    title: 'Risikobeurteilung & Planung',
-    desc: 'Analyse des Geschäftsumfelds und Identifikation spezifischer Prüffelder zur Definition einer massgeschneiderten Revisionsstrategie.',
-  },
-  {
-    number: '02',
-    title: 'Prüfungshandlungen & IKS',
-    desc: 'Gezielte System- und Detailprüfungen. Im Zentrum stehen fundierte Datenanalysen und die kritische Würdigung Ihres Internen Kontrollsystems (IKS).',
-  },
-  {
-    number: '03',
-    title: 'Berichterstattung (Management Letter)',
-    desc: 'Umfassender Revisionsbericht für die Generalversammlung und präziser Management Letter an den Verwaltungsrat mit Empfehlungen zur Prozessoptimierung.',
-  }
-];
-
 export default function Protocol() {
   const containerRef = useRef(null);
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      number: '01',
+      title: t('protocol.s1title'),
+      desc: t('protocol.s1desc'),
+    },
+    {
+      number: '02',
+      title: t('protocol.s2title'),
+      desc: t('protocol.s2desc'),
+    },
+    {
+      number: '03',
+      title: t('protocol.s3title'),
+      desc: t('protocol.s3desc'),
+    }
+  ];
 
   useGSAP(() => {
     gsap.from('.protocol-item', {
@@ -55,17 +57,17 @@ export default function Protocol() {
   return (
     <section ref={containerRef} className="w-full py-24 lg:py-32 bg-white" id="vorgehen">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 w-full relative z-10 flex flex-col md:flex-row gap-16 lg:gap-24">
-        
+
         {/* Left Side: Title */}
         <div className="w-full lg:w-5/12">
           <span className="font-mono text-[11px] uppercase tracking-widest font-semibold mb-6 block text-sea">
-            Prüfungsansatz
+            {t('protocol.label')}
           </span>
           <h2 className="font-sans font-bold text-4xl lg:text-5xl xl:text-6xl text-textDark mb-6 leading-[1.1] tracking-tight">
-            Methodisch. Effizient. Fokussiert.
+            {t('protocol.headline')}
           </h2>
           <p className="font-sans text-lg text-textDark/70 leading-relaxed max-w-sm">
-            Unser risikoorientierter Revisionsprozess garantiert höchste Präzision ohne Ihre internen Ressourcen unnötig stark zu strapazieren.
+            {t('protocol.sub')}
           </p>
         </div>
 
