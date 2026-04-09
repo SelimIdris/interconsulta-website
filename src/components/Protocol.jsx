@@ -63,7 +63,7 @@ export default function Protocol() {
           <span className="font-mono text-[11px] uppercase tracking-widest font-semibold mb-6 block text-sea">
             {t('protocol.label')}
           </span>
-          <h2 className="font-sans font-bold text-4xl lg:text-5xl xl:text-6xl text-textDark mb-6 leading-[1.1] tracking-tight">
+          <h2 className="font-sans font-bold text-[26px] sm:text-4xl lg:text-5xl xl:text-6xl text-textDark mb-6 leading-[1.1] tracking-tight">
             {t('protocol.headline')}
           </h2>
           <p className="font-sans text-lg text-textDark/70 leading-relaxed max-w-sm">

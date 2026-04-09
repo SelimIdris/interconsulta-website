@@ -36,7 +36,7 @@ export default function Philosophy() {
         <p className="font-sans font-medium text-lg lg:text-xl text-white/80 mb-6 max-w-2xl mx-auto">
           {t('philosophy.intro')}
         </p>
-        <h2 className="font-serif italic text-4xl md:text-5xl lg:text-6xl text-white leading-[1.2] max-w-4xl mx-auto">
+        <h2 className="font-serif italic text-[26px] sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.2] max-w-4xl mx-auto">
           {t('philosophy.statement')}
         </h2>
       </div>

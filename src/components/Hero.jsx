@@ -38,10 +38,10 @@ export default function Hero() {
           </span>
 
           <h1 className="hero-reveal text-left mb-8">
-            <span className="block font-sans font-bold text-5xl md:text-6xl lg:text-[72px] text-textDark tracking-tight mb-2 leading-[1.05]">
+            <span className="block font-sans font-bold text-[28px] sm:text-4xl md:text-5xl lg:text-[72px] text-textDark tracking-tight mb-2 leading-[1.05]">
               {t('hero.headline1')}<br />{t('hero.headline2')}
             </span>
-            <span className="block font-serif italic text-5xl md:text-6xl lg:text-[72px] text-sea leading-[1.1] mt-2">
+            <span className="block font-serif italic text-[28px] sm:text-4xl md:text-5xl lg:text-[72px] text-sea leading-[1.1] mt-2">
               {t('hero.italic')}
             </span>
           </h1>
