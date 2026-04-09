@@ -77,12 +77,11 @@ export default function About() {
               {t('about.p1')}
             </p>
             <div className="h-[1px] w-16 bg-sea/30 mb-8"></div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3">
                <span className="font-mono text-[12px] uppercase tracking-widest text-sea font-semibold">{t('about.memberships')}</span>
-               <div className="flex gap-4 opacity-70">
-                 {/* Visual placeholders for expert bodies, adds immense trust visually without clutter */}
+               <div className="flex flex-wrap gap-3 opacity-70">
                  <span className="font-sans font-bold text-sm text-textDark">EXPERTsuisse</span>
-                 <span className="font-sans text-sm text-textDark border-l border-textDark/20 pl-4">Zugelassener Revisionsexperte RAB</span>
+                 <span className="font-sans text-sm text-textDark border-l border-textDark/20 pl-3">Zugelassener Revisionsexperte RAB</span>
                </div>
             </div>
           </div>
