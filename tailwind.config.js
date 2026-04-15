@@ -7,23 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#FAF9F6',
+        background: '#FAF9F6', /* Warmer cream from Furnispace */
         surface: '#FFFFFF',
         textDark: '#1E242B',
-        // The user's requested palette:
-        sandstone: '#F4CC70',
-        burntOrange: '#DE7A22',
-        sea: '#20948B',
-        lagoon: '#6AB187',
+        accent: '#DDA15E',     
+        darkContrast: '#393939', 
+        borderAccent: 'rgba(30, 36, 43, 0.08)'
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['"Playfair Display"', 'serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        heading: ['Switzer', 'sans-serif'],
+        sans: ['Switzer', 'sans-serif'],
       },
       boxShadow: {
-        'soft': '0 4px 40px -2px rgba(32, 148, 139, 0.08)',
-        'premium': '0 10px 40px -10px rgba(0,0,0,0.05)',
+        'soft': '0 10px 40px -10px rgba(64, 50, 38, 0.05)',
+        'premium': '0 20px 60px -10px rgba(64, 50, 38, 0.08)',
+      },
+      borderRadius: {
+        '4xl': '2.5rem',
+        '5xl': '3rem',
       }
     },
   },

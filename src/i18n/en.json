@@ -1,101 +1,115 @@
 {
   "nav": {
-    "values": "Values",
     "about": "About us",
-    "process": "Approach",
     "services": "Services",
-    "contact": "Contact us"
+    "values": "Features",
+    "process": "Process",
+    "contact": "Get in touch"
   },
   "hero": {
-    "badge": "Licensed Audit Experts RAB",
-    "headline1": "Auditing",
-    "headline2": "at the highest level.",
-    "italic": "Precision creates trust.",
-    "sub": "Independent audit and advisory services for Swiss SMEs and corporations. We create reliable decision-making foundations for stakeholders.",
-    "cta": "Contact us"
-  },
-  "features": {
-    "label": "Our Core Values",
-    "headline": "Reliability is non-negotiable.",
-    "sub": "As a modern audit firm, we combine legal rigor with entrepreneurial sensitivity.",
-    "v1title": "Independence & Integrity",
-    "v1desc": "In accordance with the strict guidelines of the Audit Chamber, we maintain absolute independence. We provide a purely objective and unbiased assessment of your annual financial statements according to Swiss standards.",
-    "v2title": "Risk-Oriented Focus",
-    "v2desc": "We don't simply tick off rigid checklists. Our focus is on the material risks of your business model and the key controls of your Internal Control System (ICS).",
-    "v3title": "Entrepreneurial Vision",
-    "v3desc": "Our audit doesn't end with the stamp. The structured management letter and our direct feedback to the board of directors deliver concrete added value for operational improvements."
+    "h1": "EXCELLENCE.",
+    "h2": "PRECISION.",
+    "h3": "TRUST.",
+    "sub": "InterConsulta Audit AG is your established Swiss audit and advisory firm for SMEs, start-ups, and entrepreneurs in Zurich.",
+    "cta": "Get in touch"
   },
   "about": {
-    "label": "About us",
-    "headline": "Auditing as strategic added value for your company.",
-    "quote": "«An audit is far more than mere compliance with Article 727 CO – it is a central quality mark for your company.»",
-    "p1": "We combine solid methodology (Swiss GAAP, CO) with genuine entrepreneurial understanding. Through straightforward dialogue at management level, we secure processes and create structural trust for the future.",
-    "memberships": "Memberships",
-    "role": "Licensed Audit Expert RAB"
-  },
-  "philosophy": {
-    "label": "Our Philosophy",
-    "intro": "Many audits merely fulfil a legal obligation.",
-    "statement": "We understand auditing as the foundation for clarity, trust and sound decisions."
-  },
-  "protocol": {
-    "label": "Audit Approach",
-    "headline": "Methodical. Efficient. Focused.",
-    "sub": "Our risk-oriented audit process guarantees the highest precision without unnecessarily straining your internal resources.",
-    "s1title": "Risk Assessment & Planning",
-    "s1desc": "Analysis of the business environment and identification of specific audit areas to define a tailored audit strategy.",
-    "s2title": "Audit Procedures & ICS",
-    "s2desc": "Targeted system and detailed tests. In-depth data analysis and critical assessment of your Internal Control System (ICS) are at the core of our approach.",
-    "s3title": "Reporting (Management Letter)",
-    "s3desc": "Comprehensive audit report for the general meeting and precise management letter to the board of directors with recommendations for process optimisation."
+    "label": "About the company",
+    "h1": "We build trust",
+    "h2": "through professional",
+    "h3": "competence and",
+    "h4": "personal dedication.",
+    "p1": "InterConsulta Audit AG is an established auditing and consulting firm based in the heart of Zurich. We act as an independent authority that focuses on quality, discretion, and reliability.",
+    "p2": "Our clients — from dynamic start-ups to traditional SMEs — appreciate our clear language, structured methodology, and reliable results. We don't deliver empty phrases, but facts that give you security for far-reaching corporate decisions."
   },
   "services": {
-    "label": "Our Expertise",
-    "headline": "Audit areas that create security.",
-    "sub": "As licensed audit experts RAB, we cover all relevant facets of Swiss auditing.",
-    "t1label": "Ordinary Audit",
-    "t1badge": "Maximum Security",
-    "t1title": "Comprehensive audit for maximum transparency.",
-    "t1desc": "The ordinary audit provides you, your investors and stakeholders with the highest degree of reliability. We scrutinise your ICS precisely and ensure strict compliance with the legal framework (e.g. CO 727, Swiss GAAP).",
-    "t1btn": "Request details",
-    "t2label": "Limited Audit",
-    "t2badge": "Efficient Control",
-    "t2title": "Precise focus on key figures.",
-    "t2desc": "Our limited audit is tailored for Swiss SMEs. It combines legal compliance with lean processes. We precisely identify risks without unnecessarily disrupting your operational business.",
-    "t2btn": "Book a consultation",
-    "t3label": "Special Audits",
-    "t3badge": "Transaction Support",
-    "t3title": "Legal certainty for transformations & mergers.",
-    "t3desc": "Whether incorporations, capital increases or restructurings under the Merger Act: we provide reliable special audit reports that set decisive legal milestones for the future of your company.",
-    "t3btn": "Contact our experts"
+    "headline": "Our Services",
+    "sub": "Precise, legally compliant, and structured audit processes. We act as an independent partner for your financial integrity.",
+    "s1": {
+      "title": "Statutory Audit",
+      "desc": "Comprehensive audit of your annual financial statements for maximum financial transparency and security."
+    },
+    "s2": {
+      "title": "Limited Statutory Examination",
+      "desc": "Legally compliant, efficient audit services for established SMEs in Switzerland."
+    },
+    "s3": {
+      "title": "Ordinary Audit",
+      "desc": "In-depth audit processes for larger corporate groups and demanding structures."
+    },
+    "s4": {
+      "title": "Audit-related Advisory",
+      "desc": "Special audits, due diligence, and expert opinions for complex corporate transactions."
+    },
+    "s5": {
+      "title": "Business Consulting",
+      "desc": "Sparring partner for CFOs and executive boards regarding strategic financing."
+    }
   },
-  "partner": {
-    "label": "Strong Partnerships",
-    "headline": "We grow with the best.",
-    "sub": "As a modern audit firm, we audit and advise some of the most renowned companies. Trust that commits."
+  "founder": {
+    "label": "Leadership",
+    "role": "Licensed Audit Expert RAB",
+    "quote": "«Independence does not mean distance, but the courage to call things by their name with maximum clarity.»",
+    "desc": "As the founder and lead auditor of InterConsulta Audit AG, I am personally committed to auditing standards that not only tick checklists, but foster strategic corporate progress."
+  },
+  "features": {
+    "headline": "Your Advantages",
+    "f1": {
+      "title": "Personal Support",
+      "desc": "You communicate directly with decision-makers, no tedious internal bureaucracy."
+    },
+    "f2": {
+      "title": "Expertise",
+      "desc": "Many years of experience in auditing complex corporate structures."
+    },
+    "f3": {
+      "title": "Discreet Cooperation",
+      "desc": "Absolute confidentiality and protection of your business-critical data."
+    },
+    "f4": {
+      "title": "Local Roots",
+      "desc": "In the middle of Zurich, close to our clients throughout Switzerland."
+    }
+  },
+  "protocol": {
+    "headline": "Our Process",
+    "s1": {
+      "title": "Initial Contact",
+      "desc": "Non-binding discussion to get to know each other."
+    },
+    "s2": {
+      "title": "Needs Assessment",
+      "desc": "Analysis of your structure and requirements."
+    },
+    "s3": {
+      "title": "Audit / Advisory",
+      "desc": "Structured and goal-oriented execution."
+    },
+    "s4": {
+      "title": "Debriefing / Closing",
+      "desc": "Final review and forward-looking recommendations."
+    }
   },
   "contact": {
-    "label": "Contact",
-    "headline": "Let's talk without obligation.",
-    "sub": "Do you have questions about auditing or would you like a first meeting? We are happy to assist you.",
-    "company": "Inter Consulta Audit AG",
-    "formTitle": "Your enquiry",
+    "headline": "Get in touch",
+    "sub": "Discreet, professional, and without obligation. We treat your inquiry strictly confidentially.",
     "name": "Name",
-    "email": "Email",
+    "namePh": "First and last name",
     "phone": "Phone number",
-    "message": "Your enquiry",
-    "namePh": "Your first & last name",
-    "emailPh": "your.email@company.ch",
-    "phonePh": "+41 00 000 00 00",
-    "messagePh": "How can we help you?",
-    "send": "Send message"
+    "email": "E-Mail",
+    "message": "Message",
+    "messagePh": "How can we support you?",
+    "send": "Send Message",
+    "location": "Location",
+    "direct": "Direct Contact"
   },
   "footer": {
-    "tagline": "Independent audit services and personal advisory in Switzerland. Targeted, reliable and professional.",
-    "memberOf": "Member of",
+    "tagline": "Your Reliable Swiss Auditing Firm. Tailor-made audit and advisory.",
     "nav": "Navigation",
-    "impressum": "Legal notice",
-    "datenschutz": "Privacy policy",
+    "contact": "Contact",
+    "legal": "Legal",
+    "impressum": "Imprint",
+    "datenschutz": "Privacy Policy",
     "rights": "All rights reserved."
   }
 }

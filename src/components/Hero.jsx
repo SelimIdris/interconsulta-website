@@ -1,81 +1,97 @@
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
-  const container = useRef(null);
+  const containerRef = useRef(null);
+  const headlineRef = useRef(null);
+  const subRef = useRef(null);
+  const ctaRef = useRef(null);
   const { t } = useTranslation();
 
-  useGSAP(() => {
-    gsap.from('.hero-reveal', {
-      y: 30,
-      opacity: 0,
-      duration: 1.2,
-      stagger: 0.1,
-      ease: 'power3.out',
-      delay: 0.1
-    });
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    gsap.from('.hero-video-wrapper', {
-      opacity: 0,
-      clipPath: 'inset(0 100% 0 0)',
-      duration: 1.5,
-      ease: 'power3.inOut',
-      delay: 0.3
-    });
-  }, { scope: container });
+      tl.from(".hero-word", {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.1,
+        rotationX: -20,
+        transformOrigin: "bottom center"
+      })
+      .from(subRef.current, {
+        y: 20,
+        opacity: 0,
+        duration: 1
+      }, "-=0.6")
+      .from(ctaRef.current, {
+        y: 20,
+        opacity: 0,
+        duration: 1
+      }, "-=0.8")
+      
+
+
+    }, containerRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section ref={container} className="relative w-full min-h-[100dvh] flex items-center bg-background overflow-hidden pt-32 lg:pt-40 pb-16 lg:pb-24">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 w-full relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-16">
+    <section ref={containerRef} className="relative min-h-[100dvh] w-full bg-surface overflow-hidden pt-[100px] flex flex-col rounded-b-[3rem] shadow-sm z-10">
       
-        {/* Left Content - Typography */}
-        <div className="w-full lg:w-[55%] flex flex-col justify-center">
-          <span className="hero-reveal font-mono text-[12px] uppercase tracking-widest font-semibold mb-6 block text-sea flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-sea animate-pulse"></div>
-            {t('hero.badge')}
-          </span>
+      <div className="absolute inset-4 top-[80px] bottom-16 rounded-[3rem] overflow-hidden">
+        <div className="absolute inset-0 bg-background mix-blend-multiply opacity-20 z-10"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2569&auto=format&fit=crop" 
+          alt="Premium Office Space" 
+          className="w-full h-full object-cover scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-textDark/80 via-textDark/20 to-transparent z-10"></div>
+      </div>
 
-          <h1 className="hero-reveal text-left mb-8">
-            <span className="block font-sans font-bold text-[28px] sm:text-4xl md:text-5xl lg:text-[72px] text-textDark tracking-tight mb-2 leading-[1.05]">
-              {t('hero.headline1')}<br />{t('hero.headline2')}
-            </span>
-            <span className="block font-serif italic text-[28px] sm:text-4xl md:text-5xl lg:text-[72px] text-sea leading-[1.1] mt-2">
-              {t('hero.italic')}
-            </span>
-          </h1>
-          
-          <p className="hero-reveal font-sans text-lg text-textDark/70 mb-10 max-w-md leading-relaxed">
-            {t('hero.sub')}
+      <div className="relative z-20 flex-1 flex flex-col justify-end px-8 lg:px-20 pb-48 max-w-[1400px] mx-auto w-full">
+        <div ref={headlineRef} className="flex flex-col gap-1 perspective-1000">
+          <div className="overflow-hidden">
+            <h1 className="hero-word text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tighter">
+              {t('hero.h1', 'EXZELLENZ.')}
+            </h1>
+          </div>
+          <div className="overflow-hidden">
+            <h1 className="hero-word text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tighter">
+              {t('hero.h2', 'PRÄZISION.')}
+            </h1>
+          </div>
+          <div className="overflow-hidden">
+            <h1 className="hero-word text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-accent leading-[0.9] tracking-tighter">
+              {t('hero.h3', 'VERTRAUEN.')}
+            </h1>
+          </div>
+        </div>
+
+        <div className="mt-8 md:mt-12 max-w-[450px]">
+          <p ref={subRef} className="font-sans text-lg md:text-xl text-surface/90 leading-relaxed font-light">
+            {t('hero.sub', 'Die Inter Consulta Audit AG ist Ihre etablierte Schweizer Wirtschaftsprüfungsgesellschaft für KMU, Start-ups und Unternehmer in Zürich.')}
           </p>
-
-          <div className="hero-reveal flex items-center gap-6">
-            <a href="#kontakt" className="bg-textDark text-white px-8 py-3.5 rounded-full font-sans font-medium text-[15px] transition-all duration-300 hover:bg-sea shadow-sm hover:shadow-md hover:-translate-y-[2px]">
-              {t('hero.cta')}
+          
+          <div ref={ctaRef} className="mt-8 flex items-center gap-4">
+            <a href="#kontakt" className="group flex items-center gap-4 bg-surface text-textDark px-8 py-4 rounded-full font-heading font-medium hover:bg-accent hover:text-white transition-all duration-[400ms]">
+              <span className="relative overflow-hidden block">
+                <span className="block group-hover:-translate-y-full transition-transform duration-400">{t('hero.cta', 'Kontakt aufnehmen')}</span>
+                <span className="absolute top-full left-0 block group-hover:-translate-y-full transition-transform duration-400">{t('hero.cta', 'Kontakt aufnehmen')}</span>
+              </span>
+              <div className="w-8 h-8 rounded-full bg-textDark text-white flex items-center justify-center group-hover:bg-white group-hover:text-accent transition-colors">
+                 <ArrowRight size={16} />
+              </div>
             </a>
           </div>
         </div>
-
-        {/* Right Content - Video Timelapse */}
-        <div className="w-full lg:w-[45%] h-[50vh] lg:h-[75vh] flex justify-end items-center">
-          <div className="hero-video-wrapper w-full h-full max-h-[800px] relative rounded-[2rem] overflow-hidden shadow-premium bg-sea/5">
-            {/* YouTube Embed Scaled massively to guarantee no black borders anywhere */}
-            <div className="absolute top-1/2 left-1/2 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-              <iframe
-                title="Paradeplatz Zurich Timelapse"
-                src="https://www.youtube-nocookie.com/embed/wOPwaFmC7QI?autoplay=1&mute=1&loop=1&playlist=wOPwaFmC7QI&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&playsinline=1"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                className="w-full h-full object-cover opacity-90"
-              ></iframe>
-            </div>
-            {/* Overlay to integrate the video smoothly into the brand color palette */}
-            <div className="absolute inset-0 bg-sea/10 mix-blend-multiply pointer-events-none"></div>
-          </div>
-        </div>
-        
       </div>
+
+
+
     </section>
   );
 }

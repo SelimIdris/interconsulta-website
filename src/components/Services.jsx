@@ -1,118 +1,94 @@
-import * as React from "react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs"
-import { Pointer, ShieldCheck, Scale } from "lucide-react"
-import { Badge } from "./ui/badge"
-import { Button } from "./ui/button"
-import { useTranslation } from 'react-i18next'
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FileCheck, Search, LineChart, ShieldCheck, Briefcase } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
+  const containerRef = useRef(null);
   const { t } = useTranslation();
 
-  const tabsData = [
+  const services = [
     {
-      value: "ordentliche",
-      icon: <ShieldCheck className="h-auto w-4 shrink-0 transition-colors" />,
-      label: t('services.t1label'),
-      content: {
-        badge: t('services.t1badge'),
-        title: t('services.t1title'),
-        description: t('services.t1desc'),
-        buttonText: t('services.t1btn'),
-        imageSrc: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop",
-        imageAlt: "Prüfung Dokumente Ordentliche Revision",
-      },
+      title: t('services.s1.title', 'Wirtschaftsprüfung'),
+      desc: t('services.s1.desc', 'Umfassende Prüfung Ihrer Jahresrechnungen für maximale finanzielle Transparenz und Sicherheit.'),
+      icon: <ShieldCheck size={32} strokeWidth={1} />
     },
     {
-      value: "eingeschraenkte",
-      icon: <Pointer className="h-auto w-4 shrink-0 transition-colors" />,
-      label: t('services.t2label'),
-      content: {
-        badge: t('services.t2badge'),
-        title: t('services.t2title'),
-        description: t('services.t2desc'),
-        buttonText: t('services.t2btn'),
-        imageSrc: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2670&auto=format&fit=crop",
-        imageAlt: "Meeting Raum Eingeschränkte Revision",
-      },
+      title: t('services.s2.title', 'Eingeschränkte Revision'),
+      desc: t('services.s2.desc', 'Gesetzeskonforme, effiziente Prüfungsdienstleistung für etablierte KMU in der Schweiz.'),
+      icon: <FileCheck size={32} strokeWidth={1} />
     },
     {
-      value: "spezial",
-      icon: <Scale className="h-auto w-4 shrink-0 transition-colors" />,
-      label: t('services.t3label'),
-      content: {
-        badge: t('services.t3badge'),
-        title: t('services.t3title'),
-        description: t('services.t3desc'),
-        buttonText: t('services.t3btn'),
-        imageSrc: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop",
-        imageAlt: "Vertragsbesprechung Spezialprüfung",
-      },
+      title: t('services.s3.title', 'Ordentliche Revision'),
+      desc: t('services.s3.desc', 'Tiefgehende Prüfungsprozesse für grössere Firmengruppen und anspruchsvolle Strukturen.'),
+      icon: <Search size={32} strokeWidth={1} />
     },
+    {
+      title: t('services.s4.title', 'Prüfungsnahe Beratung'),
+      desc: t('services.s4.desc', 'Spezialprüfungen, Due Diligence und Gutachten bei komplexen unternehmerischen Transaktionen.'),
+      icon: <Briefcase size={32} strokeWidth={1} />
+    },
+    {
+      title: t('services.s5.title', 'BWL Unterstützung'),
+      desc: t('services.s5.desc', 'Sparringpartner für CFOs und Geschäftsleitungen bei strategischen Finanzierungsfragen.'),
+      icon: <LineChart size={32} strokeWidth={1} />
+    }
   ];
 
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".service-card", {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 75%",
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out"
+      });
+    }, containerRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="py-24 lg:py-32 scroll-mt-24 bg-white" id="leistungen-detail">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-[1400px]">
-        <div className="flex flex-col items-center gap-4 text-center mb-16">
-          <Badge variant="outline" className="mb-2 tracking-widest font-mono uppercase bg-[#F5F8F7] border-sea/20 text-sea">{t('services.label')}</Badge>
-          <h2 className="max-w-2xl text-4xl lg:text-5xl font-sans font-bold text-textDark tracking-tight leading-[1.1]">
-            {t('services.headline')}
-          </h2>
-          <p className="text-textDark/70 text-lg max-w-xl mt-2 mx-auto">
-            {t('services.sub')}
-          </p>
+    <section id="leistungen" ref={containerRef} className="py-24 bg-surface rounded-[3rem] mx-4 lg:mx-8 mb-24 relative overflow-hidden shadow-soft">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
+        
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div className="max-w-[600px]">
+             <h2 className="text-4xl md:text-5xl font-heading font-medium text-textDark tracking-tight mb-6">
+                {t('services.headline', 'Unsere Dienstleistungen')}
+             </h2>
+             <p className="font-sans text-textDark/60 text-lg font-light leading-relaxed">
+                {t('services.sub', 'Präzise, gesetzeskonforme und strukturierte Prüfungsprozesse. Wir agieren als unabhängiger Partner für Ihre finanzielle Integrität.')}
+             </p>
+          </div>
         </div>
 
-        <Tabs defaultValue={tabsData[0].value} className="mt-8">
-          <TabsList className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-8 overflow-x-auto pb-4">
-            {tabsData.map((tab) => (
-              <TabsTrigger
-                key={tab.value}
-                value={tab.value}
-                className="flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-textDark/60 transition-all border border-transparent
-                           data-[state=active]:bg-textDark data-[state=active]:text-white data-[state=active]:shadow-premium data-[state=active]:border-textDark/10
-                           hover:text-textDark hover:bg-[#F5F8F7] data-[state=active]:hover:bg-textDark cursor-pointer"
-              >
-                {tab.icon} {tab.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((srv, idx) => (
+            <div 
+              key={idx} 
+              className={`service-card group bg-background rounded-[2.5rem] p-10 hover:bg-textDark transition-colors duration-500 cursor-pointer border border-borderAccent ${idx === 4 ? 'md:col-span-2 lg:col-span-1' : ''}`}
+            >
+              <div className="h-16 w-16 bg-surface rounded-full flex items-center justify-center mb-16 text-textDark group-hover:text-accent transition-colors shadow-sm">
+                {srv.icon}
+              </div>
+              <h3 className="font-heading text-2xl font-medium text-textDark group-hover:text-surface transition-colors mb-4">
+                {srv.title}
+              </h3>
+              <p className="font-sans text-textDark/60 font-light group-hover:text-surface/70 transition-colors leading-relaxed">
+                {srv.desc}
+              </p>
+            </div>
+          ))}
+        </div>
 
-          <div className="mx-auto mt-8 xl:mt-12 max-w-screen-xl rounded-[2rem] bg-[#F5F8F7] p-8 lg:p-16 shadow-inner border border-sea/5 overflow-hidden">
-            {tabsData.map((tab) => (
-              <TabsContent
-                key={tab.value}
-                value={tab.value}
-                className="grid place-items-center gap-12 lg:grid-cols-2 lg:gap-16 focus:outline-none animate-[fadeIn_0.5s_ease-out]"
-              >
-                <div className="flex flex-col gap-6 items-start">
-                  <Badge variant="default" className="shadow-sm tracking-wide">
-                    {tab.content.badge}
-                  </Badge>
-                  <h3 className="text-3xl font-sans font-bold text-textDark lg:text-4xl leading-[1.2] tracking-tight">
-                    {tab.content.title}
-                  </h3>
-                  <p className="text-textDark/80 lg:text-lg leading-relaxed">
-                    {tab.content.description}
-                  </p>
-                  <Button className="mt-4 rounded-full font-sans font-bold shadow-soft hover:-translate-y-[2px] transition-transform" size="lg" onClick={() => window.location.href="#kontakt"}>
-                    {tab.content.buttonText}
-                  </Button>
-                </div>
-
-                <div className="relative w-full overflow-hidden rounded-[1.5rem] shadow-premium bg-sea/10 aspect-[4/3] group">
-                  <img
-                    src={tab.content.imageSrc}
-                    alt={tab.content.imageAlt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-sea/10 mix-blend-multiply pointer-events-none"></div>
-                </div>
-
-              </TabsContent>
-            ))}
-          </div>
-        </Tabs>
       </div>
     </section>
   );

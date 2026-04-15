@@ -1,25 +1,25 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import Features from '../components/Features';
+import Marquee from '../components/Marquee';
 import About from '../components/About';
-import Philosophy from '../components/Philosophy';
-import Protocol from '../components/Protocol';
 import Services from '../components/Services';
-import Partner from '../components/Partner';
+import Founder from '../components/Founder';
+import Features from '../components/Features';
+import Protocol from '../components/Protocol';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="w-full bg-background min-h-screen relative selection:bg-sea selection:text-white">
+    <div className="w-full bg-background min-h-screen relative selection:bg-accent selection:text-white overflow-x-hidden">
       <Navbar />
       <Hero />
-      <Features />
+      <Marquee />
       <About />
-      <Philosophy />
-      <Protocol />
       <Services />
-      <Partner />
+      <Founder />
+      <Features />
+      <Protocol />
       <Contact />
       <Footer />
     </div>
